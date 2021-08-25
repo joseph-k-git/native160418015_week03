@@ -14,7 +14,11 @@
             android:id="@+id/actionGameFragment"
             app:destination="@id/gameFragment"
             app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:exitAnim="@android:anim/fade_out" >
+            <argument
+                android:name="player_name"
+                android:defaultValue="Player 1" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -30,5 +34,25 @@
             android:name="player_name"
             android:defaultValue="Player 1"
             app:argType="string" />
+        <action
+            android:id="@+id/actionEndFragment"
+            app:destination="@id/endFragment" >
+            <argument
+                android:name="playerScore"
+                android:defaultValue="0" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.joseph18.ifubaya.adv160418015week2.EndFragment"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" >
+        <action
+            android:id="@+id/action_endFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="playerScore"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>
