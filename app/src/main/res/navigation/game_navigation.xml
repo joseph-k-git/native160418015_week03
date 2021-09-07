@@ -14,7 +14,7 @@
             android:id="@+id/actionGameFragment"
             app:destination="@id/gameFragment"
             app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" >
+            app:exitAnim="@android:anim/fade_out">
             <argument
                 android:name="player_name"
                 android:defaultValue="Player 1" />
@@ -27,9 +27,9 @@
         tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/actionMainFragment"
-            app:destination="@id/mainFragment"
             app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/mainFragment" />
         <argument
             android:name="player_name"
             android:defaultValue="Player 1"
@@ -49,7 +49,7 @@
         tools:layout="@layout/fragment_end" >
         <action
             android:id="@+id/action_endFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:popUpTo="@id/mainFragment" />
         <argument
             android:name="playerScore"
             app:argType="integer"
