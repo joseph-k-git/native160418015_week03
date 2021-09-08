@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/game_navigation"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/itemHome">
 
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/itemHome"
         android:name="com.joseph18.ifubaya.adv160418015week2.MainFragment"
-        android:label="Main Screen"
+        android:label="Home Screen"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/actionGameFragment"
@@ -29,7 +29,7 @@
             android:id="@+id/actionMainFragment"
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out"
-            app:popUpTo="@id/mainFragment" />
+            app:popUpTo="@id/itemHome" />
         <argument
             android:name="player_name"
             android:defaultValue="Player 1"
@@ -49,12 +49,22 @@
         tools:layout="@layout/fragment_end" >
         <action
             android:id="@+id/action_endFragment_to_mainFragment"
-            app:destination="@id/mainFragment"
-            app:popUpTo="@id/mainFragment"
+            app:destination="@id/itemHome"
+            app:popUpTo="@id/itemHome"
             app:popUpToInclusive="true" />
         <argument
             android:name="playerScore"
             app:argType="integer"
             android:defaultValue="0" />
     </fragment>
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="com.joseph18.ifubaya.adv160418015week2.HistoryFragment"
+        android:label="History Screen"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.joseph18.ifubaya.adv160418015week2.ProfileFragment"
+        android:label="Profile Screen"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
