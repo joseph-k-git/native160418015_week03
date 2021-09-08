@@ -19,6 +19,9 @@
                 android:name="player_name"
                 android:defaultValue="Player 1" />
         </action>
+        <action
+            android:id="@+id/actionOptionFragment"
+            app:destination="@id/optionFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -67,4 +70,9 @@
         android:name="com.joseph18.ifubaya.adv160418015week2.ProfileFragment"
         android:label="Profile Screen"
         tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/optionFragment"
+        android:name="com.joseph18.ifubaya.adv160418015week2.OptionFragment"
+        android:label="Option Screen"
+        tools:layout="@layout/fragment_option" />
 </navigation>
